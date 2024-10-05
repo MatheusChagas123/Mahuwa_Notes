@@ -1,4 +1,6 @@
-import { Container, Profile } from './styles'; // Corrigido aqui
+import {RiShutDownLine} from 'react-icons/ri'
+
+import { Container, Profile,Logout } from './styles'; // Corrigido aqui
 
 export function Header() {
   return (
@@ -14,6 +16,9 @@ export function Header() {
           <strong>Matheus Chagas</strong>
         </div>
       </Profile>
+      <Logout>
+        <RiShutDownLine />
+      </Logout>
     </Container>
   );
 }
