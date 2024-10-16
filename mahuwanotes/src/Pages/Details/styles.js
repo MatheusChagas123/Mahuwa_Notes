@@ -17,6 +17,6 @@ list-style-type: style none;
 
 }
 a{
-  color:${(theme)=>theme.COLORS.WHITE};
+  color: ${({theme})=> theme.COLORS.WHITE};
 }
 `; 
