@@ -3,15 +3,17 @@ import {Header} from '../../componets/header';
 import {Button} from '../../componets/Button';
 import {Section} from '../../componets/Section';
 import {Tag} from '../../componets/Tag';
+import {ButtonText} from '../../componets/ButtonText'
 export  function Details(){
   
   return (
     <Container>
       <Header/>
-      <Section title="Links úteis">
+      <ButtonText title="excluir nota"/>
+      <Section title="Links úteis">        
         <Links>
-          <li><a href="#">https://ludopedia-anexos.nyc3.digitaloceanspaces.com/zombicide_green_hor_207365.pdf</a></li>
-          <li><a href="#">https://ludopedia-anexos.nyc3.digitaloceanspaces.com/zombicide_green_hor_207365.pdf</a></li>
+        <li><a href="#">https://app.rocketseat.com.br/classroom/stage-09</a></li>
+          <li><a href="#">https://app.rocketseat.com.br/classroom/stage-09</a></li>
         </Links>
         </Section>
 
