@@ -4,14 +4,14 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './styles/global';
 import theme from './styles/theme'
 
-import { Details }from './Pages/Details';
+import { Home }from './Pages/Home';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode >
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-    <Details/>
+    <Home/>
     </ThemeProvider>
     
   </StrictMode>,
