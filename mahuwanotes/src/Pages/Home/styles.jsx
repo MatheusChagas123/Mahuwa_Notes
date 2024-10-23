@@ -36,6 +36,15 @@ background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
 
 export const Menu = styled.ul`
 grid-area: menu;
+background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
+text-align:center;
+
+padding-top: 64px;
+>li{
+  margin-bottom: 24px;
+}
+
+
 
 `;
 
