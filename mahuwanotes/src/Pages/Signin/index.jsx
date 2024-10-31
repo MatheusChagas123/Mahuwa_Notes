@@ -3,7 +3,7 @@ import { FiMail, FiLock } from 'react-icons/fi';
 import { Input } from '../../componets/Input';
 import { Button } from '../../componets/Button';
 
-import { Container, Form } from './styles'
+import { Container, Form,Background } from './styles'
 
 export function SignIn() {
   return (
@@ -30,6 +30,7 @@ export function SignIn() {
 
         <a href="#">Criar conta</a>
       </Form>
+      <Background/>
     </Container>
   )
 }

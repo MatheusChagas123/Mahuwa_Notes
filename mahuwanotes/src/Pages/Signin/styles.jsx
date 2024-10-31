@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import backgroundimg from '../../assets/wp13556336.jpg';
 
 export const Container = styled.div`
   height: 100vh;
@@ -38,3 +39,9 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.ORANGE};
   }
 `
+
+export const Background = styled.div`
+  flex: 1;
+  background: url(${backgroundimg}) no-repeat center center;
+  background-size: cover;
+`;
