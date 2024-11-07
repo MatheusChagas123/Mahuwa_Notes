@@ -22,7 +22,8 @@ export function New() {
           <Textarea placeholder="Observações" />
 
          <Section title="Links úteis">
-          <NoteItem/>
+          <NoteItem value="https://google.com.br"/>
+          <NoteItem placeholder="Novo link"isNew/>
          </Section>
 
           
