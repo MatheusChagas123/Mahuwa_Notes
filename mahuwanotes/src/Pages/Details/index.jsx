@@ -1,5 +1,5 @@
 import { Container,Links,Content } from "./styles"
-import {Header} from '../../componets/header';
+import {Header} from '../../componets/Header';
 import {Button} from '../../componets/Button';
 import {Section} from '../../componets/Section';
 import {Tag} from '../../componets/Tag';
