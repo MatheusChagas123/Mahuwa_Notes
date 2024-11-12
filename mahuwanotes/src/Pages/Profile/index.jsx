@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+import {useNavigate} from 'react-router-dom';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
@@ -7,7 +8,7 @@ import { useAuth } from "../../hooks/auth";
 import {api} from '../../services/api';
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
 import { Container, Form, Avatar } from './styles';
-import { Link } from 'react-router-dom';
+
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -15,6 +16,12 @@ export function Profile() {
   const [email, setEmail] = useState(user.email);
   const [passwordOld, setPasswordOld] = useState("");
   const [passwordNew, setPasswordNew] = useState("");
+
+  const navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1);
+  }
 
   const avatarUrl = user.avatar ?`${api.defaults.baseURL}/files/${user.avatar}`:avatarPlaceholder;
   const [avatar, setAvatar] = useState(avatarUrl);
@@ -45,7 +52,7 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <Link to="/"> <FiArrowLeft /> </Link>
+        <button type="button" onClick={handleBack} > <FiArrowLeft size={24}/> </button>
       </header>
       <Form onSubmit={handleUpdate}>
         <Avatar>
