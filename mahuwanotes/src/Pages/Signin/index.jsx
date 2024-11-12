@@ -1,15 +1,16 @@
-import { FiMail, FiLock } from 'react-icons/fi';
-import {Link} from 'react-router-dom';
-import { Input } from '../../componets/Input';
-import { Button } from '../../componets/Button';
+import { FiMail, FiLock } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
-import { Container, Form,Background } from './styles'
+import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
+
+import { Container, Form, Background } from './styles'
 
 export function SignIn() {
   return (
     <Container>
       <Form>
-        <h1>Mahuwa Notes</h1>
+        <h1>Rocket Notes</h1>
         <p>Aplicação para salvar e gerenciar seus links úteis.</p>
 
         <h2>Faça seu login</h2>
@@ -30,7 +31,8 @@ export function SignIn() {
 
         <Link to="/register">Criar conta</Link>
       </Form>
-      <Background/>
+
+      <Background />
     </Container>
   )
 }

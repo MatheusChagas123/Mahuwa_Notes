@@ -1,6 +1,6 @@
 import { FiArrowLeft,FiUser, FiMail, FiLock,FiCamera} from 'react-icons/fi';
-import {Input} from '../../componets/Input';
-import {Button} from '../../componets//Button';
+import {Input} from '../../components/Input';
+import {Button} from '../../components//Button';
 import {Container,Form,Avatar} from './styles';
 import {Link} from 'react-router-dom';
 export function Profile (){
