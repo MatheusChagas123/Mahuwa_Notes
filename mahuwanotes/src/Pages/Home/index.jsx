@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi';
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 import { api } from '../../services/api';
@@ -14,7 +15,14 @@ export function Home() {
   const [tags, setTags] = useState([]);
   const [tagsSelected,setTagsSelected] = useState([]);
 
+  const navigate = useNavigate();
 
+
+function handleDetails(id){
+  navigate(`/details/${id}`);
+}
+ 
+ 
   function handleTagSelected(tagName) {
 
     if(tagName === "all" ){
@@ -90,6 +98,7 @@ useEffect(() => {
               <Note
               key={String(note.id)}
               data={note}
+              onClick ={()=> handleDetails(note.id)}
               />
             ))
           }
