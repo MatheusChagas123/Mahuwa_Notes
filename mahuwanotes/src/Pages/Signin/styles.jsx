@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import backgroundImg from '../../assets/wp13556336.jpg'
+import backgroundImg from '../../assets/wp13556336.jpg';
 
 export const Container = styled.div`
   height: 100vh;
