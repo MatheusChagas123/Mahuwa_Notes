@@ -26,12 +26,17 @@ function AuthProvider({ children }) {
     }
   }
 
-  async function updateProfile(updatedUser) {
+  async function updateProfile({user,avatarFile}) {
     try {
-      const response = await api.put("/users", updatedUser);
-      const user = response.data;
-
+      if(avatarFile){
+        const fileUploadForm = new FormData();
+        fileUploadForm.append("avatar",avatarFile);
+        const response = await api.patch("/users/avatar",fileUploadForm);
+        user.avatar = response.data.avatar;
+      }
+       await api.put("/users", user);
       localStorage.setItem("@rocknotes:user", JSON.stringify(user));
+
       setData({ user, token: data.token });
 
       alert("Perfil atualizado com sucesso!");
