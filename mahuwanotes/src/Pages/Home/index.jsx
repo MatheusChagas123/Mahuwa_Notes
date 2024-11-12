@@ -16,6 +16,10 @@ export function Home() {
 
 
   function handleTagSelected(tagName) {
+
+    if(tagName === "all" ){
+      return setTagsSelected ([]);
+    }
     const alreadySelected = tagsSelected.includes(tagName);
     
     if (alreadySelected) {
